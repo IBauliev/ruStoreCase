@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RuStore Documentation Chatbot</title>
+    <link rel="shortcut icon" href="image/favico.ico">
+    <link rel="stylesheet" href="styles.css"> <!-- Подключение файла стилей CSS -->
+</head>
+<body>
+    <header>
+        <div class="logo">
+             <!-- Логотип и текст в шапке сайта -->
+            <img src="image/RuStore_Icon.png" alt="RuStore Logo">
+            <span>RuStore.documentation</span> 
+        </div>
+    </header>
+    <div class="container">
+        <aside class="sidebar">
+            <ul>
+                <!-- Ссылки на техническую поддержку и магазин RuStore с иконками -->
+                <li>
+                    <img src="image/RuStore_Icon.png" alt="Support Icon">
+                    <a href="https://www.rustore.ru/help/">Техническая поддержка</a>
+                </li>
+                <li>
+                    <img src="image/RuStore_Icon.png" alt="Store Icon">
+                    <a href="https://www.rustore.ru/">RuStore Shop</a>
+                </li>
+            </ul>
+             <!-- Информация о используемой нейросети -->
+            <div class="info">
+                <p>Используемая модель: RuStore GPT 1.0</p>
+            </div>
+        </aside>
+        <main class="chat-container">
+            <!-- Контейнер для сообщений чата -->
+            <div id="chatbox"></div>
+               <!-- Поле ввода сообщения и кнопка отправки -->
+            <div class="input-container">
+                <input type="text" id="userInput" placeholder="Enter your message...">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </main>
+    </div>
+     <!-- Подключение JavaScript файла -->
+    <script src="script.js"></script>
+</body>
+</html>
