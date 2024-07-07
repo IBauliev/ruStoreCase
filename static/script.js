@@ -11,7 +11,7 @@ async function sendMessage() {
 
     try {
          // Отправка запроса к API
-        const response = await fetch('https://api.deepseek.com', {
+        const response = await fetch('https://api.', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
