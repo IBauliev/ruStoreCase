@@ -8,42 +8,45 @@
     <link rel="stylesheet" href="../static/styles.css"> <!-- Подключение файла стилей CSS -->
 </head>
 <body>
-    <header>
-        <div class="logo">
-             <!-- Логотип и текст в шапке сайта -->
-            <img src="../static/image/RuStore_Icon.png" alt="RuStore Logo">
-            <span>RuStore.documentation</span> 
+<header>
+    <div class="logo">
+        <!-- Логотип и текст в шапке сайта -->
+        <img src="../static/image/RuStore_Icon.png" alt="RuStore Logo">
+        <span>RuStore.documentation</span>
+    </div>
+</header>
+<div class="container">
+    <aside class="sidebar">
+        <ul>
+            <!-- Ссылки на техническую поддержку и магазин RuStore с иконками -->
+            <li>
+                <img src="../static/image/RuStore_Icon.png" alt="Support Icon">
+                <a href="https://www.rustore.ru/help/">Техническая поддержка</a>
+            </li>
+            <li>
+                <img src="../static/image/RuStore_Icon.png" alt="Store Icon">
+                <a href="https://www.rustore.ru/">RuStore Shop</a>
+            </li>
+        </ul>
+        <!-- Информация о используемой нейросети -->
+        <div class="info">
+            <p>Используемая модель: RuStore GPT 1.0</p>
         </div>
-    </header>
-    <div class="container">
-        <aside class="sidebar">
-            <ul>
-                <!-- Ссылки на техническую поддержку и магазин RuStore с иконками -->
-                <li>
-                    <img src="../static/image/RuStore_Icon.png" alt="Support Icon">
-                    <a href="https://www.rustore.ru/help/">Техническая поддержка</a>
-                </li>
-                <li>
-                    <img src="../static/image/RuStore_Icon.png" alt="Store Icon">
-                    <a href="https://www.rustore.ru/">RuStore Shop</a>
-                </li>
-            </ul>
-             <!-- Информация о используемой нейросети -->
-            <div class="info">
-                <p>Используемая модель: RuStore GPT 1.0</p>
-            </div>
-        </aside>
-        <main class="chat-container">
-            <!-- Контейнер для сообщений чата -->
-            <div id="chatbox"></div>
-               <!-- Поле ввода сообщения и кнопка отправки -->
+    </aside>
+    <main class="chat-container">
+        <!-- Контейнер для сообщений чата -->
+        <div id="chatbox"></div>
+        <!-- Поле ввода сообщения и кнопка отправки -->
+        <form method="POST">
             <div class="input-container">
-                <input type="text" id="userInput" placeholder="Enter your message...">
+                <input type="text" id="userInput" name="user_input" placeholder="Enter your message...">
                 <button onclick="sendMessage()">Send</button>
             </div>
-        </main>
-    </div>
-     <!-- Подключение JavaScript файла -->
-    <script src="../static/script.js"></script>
+        </form>
+
+    </main>
+</div>
+<!-- Подключение JavaScript файла -->
+<script src="../static/script.js"></script>
 </body>
 </html>
